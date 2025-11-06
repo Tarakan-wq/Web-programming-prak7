@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Форма підписки</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section id="subscribe-section" class="card fade-in">
+      <img src="assets\mail.jpg" alt="Email icon" class="banner" />
+      <h2>Subscribe to our Newsletter</h2>
+      <p>Join thousands getting emails in their inbox.</p>
+      <form id="subscribe-form">
+        <input
+          type="email"
+          id="email"
+          placeholder="email@example.com"
+          required
+        />
+        <span id="error-message" class="error"></span>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <dialog id="success-dialog" class="fade-dialog">
+      <div class="success-card fade-in">
+        <img src="assets\Icon.png" alt="Success" class="success-icon" />
+        <p id="success-message">
+          Your subscription has been placed for your <b id="user-email"></b>!
+        </p>
+        <button id="close-dialog">Thanks!</button>
+      </div>
+    </dialog>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
