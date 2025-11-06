@@ -111,3 +111,62 @@ dialog {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
+/* --- Оформлення модального вікна успіху --- */
+dialog {
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  background: transparent;
+  overflow: visible;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Стиль для блоку всередині діалогу */
+.success-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+  animation: popIn 0.4s ease forwards;
+}
+
+.success-card p {
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  animation: bounce 1s ease;
+}
+
+#close-dialog {
+  background: black;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+#close-dialog:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* Центрування діалогу */
+::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
